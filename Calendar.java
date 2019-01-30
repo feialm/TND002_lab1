@@ -82,7 +82,7 @@ public class Calendar {
 	
 			Integer[] dateMonthYear = this.getBirthDate(number);
 			
-			String Month = "bajs"; //bara tog något, denna labb är bajs
+			String Month = "bajs"; //denna labb är bajs
 			
 			switch(dateMonthYear[1])
 			{
@@ -98,7 +98,10 @@ public class Calendar {
 			case 10: Month = "October" ; break;
 			case 11: Month = "October" ; break;
 			case 12: Month = "December" ; break;
-			default: Month = " ERROR" ; break; //det här kommer egentligen inte ske för att alla månader i databsen är mellan 1-12
+			default: Month = " ERROR" ; break;
+			//det här kommer egentligen inte ske för att alla månader i databsen är mellan 1-12
+			// #good programming practice jaooo
+			
 			}
 			
 			return lowerCaseName + " "+ upperCaseSurname + " " + dateMonthYear[1]+ " "+ Month + " "+ dateMonthYear[2];
@@ -107,16 +110,21 @@ public class Calendar {
 		}
 		
 		public void matchingYear(int year)
-		{
-			Integer[]testingYear = this.getBirthDate(year);
-
-			int b = testingYear[1];
+		{	
 			
-			// a ska vara året user skriver in
-			
-			if( a.equals(b))
+			for (int i = 0; i < counter; i++)
 			{
-				System.out.println(theCalendar.writeName(number));
+				
+				Integer[]testingYear = this.getBirthDate(i);
+	
+				int b = testingYear[2]; //aktuell persons födelseår
+				
+				// year skickad från lab1.java
+				
+				if( year == b)
+				{
+					System.out.println(this.writeName(i));
+				}
 			}
 			
 		}
@@ -124,15 +132,22 @@ public class Calendar {
 		
 		public void matchingSurname(String surname)
 		{
-			
-			String[] testingSurname = this.getName(surname);
-			
-			String y = testingSurname[1];
-			// x ska vara namnet som user skriver in
-			
-			if(x.equals.(y))
+				
+			for(int i= 0; i < counter; i++)
 			{
-				System.out.println(theCalendar.writeName(number));
+				String[] testingSurname = this.getName(i);
+			
+				
+				// turn everything to lowercase so names can match, utan hänsyn till stora/små bokstäver
+				String y = testingSurname[1].toLowerCase(); // aktuell persons efternamn
+				surname = surname.toLowerCase();
+				
+				//if(surname.toLowerCase().equals(y.toLowerCase());
+				// surname.equalsIgnoreCase(y);
+				if(surname.equals(y))
+				{
+					System.out.println(this.writeName(i));
+				}
 			}
 			
 		}
