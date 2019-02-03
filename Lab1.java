@@ -25,9 +25,9 @@ public class Lab1 {
 		
 		
 		for (int j = 0; j < list.length; j++) {
-			//kolla igneom hela arrayen men inget mera
+			//kolla igenom hela arrayen men inget mera
 			
-			String[] person = list[j].split(" +");
+			String[] person = list[j].split(" +");// förnamn klipps av, läggs in, efternman klipps av, läggs in osv
 	
 			theCalendar.addperson(person);	
 			
@@ -43,6 +43,7 @@ public class Lab1 {
 		// Kallar på funktionen getBirthDate och skriver ut värdena
 		Integer[]arrayForBirthDates = theCalendar.getBirthDate(j);
 		//System.out.println(arrayForBirthDates[0] + " " + arrayForBirthDates[1] + " " + arrayForBirthDates[2]);
+		
 		// arrayForBirthDates är samma som theCalendar.getBirthDate(j)
 		// tar det som den hittar på plats j, skriver ut
 		// bla skriver ut namnen

@@ -28,7 +28,7 @@ public class Calendar {
 				}
 				
 				counter++; //increase counter by 1 when a names and their birthday is added to slot
-				return ("");// Person added at position %2d". counter);	
+				return "Person added at position " +  counter +".";
 			}				
 		}
 		
@@ -100,7 +100,7 @@ public class Calendar {
 			case 12: Month = "December" ; break;
 			default: Month = " ERROR" ; break;
 			//det här kommer egentligen inte ske för att alla månader i databsen är mellan 1-12
-			// #good programming practice jaooo
+			// #good programming practice
 			
 			}
 			
@@ -142,6 +142,7 @@ public class Calendar {
 				String y = testingSurname[1].toLowerCase(); // aktuell persons efternamn
 				surname = surname.toLowerCase();
 				
+				// Olika sätt att skriva samma if-sats
 				//if(surname.toLowerCase().equals(y.toLowerCase());
 				// surname.equalsIgnoreCase(y);
 				if(surname.equals(y))
