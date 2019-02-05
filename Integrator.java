@@ -39,7 +39,14 @@ public class Integrator {
 		System.out.println(integral);
 		System.out.println(intError);
 		
-		System.out.println(String.format("The result is: %4.2f units of length and the error is %-2d.0 percent", integral , intError));	
+		if(integral > 10.00)
+		{
+			System.out.println(String.format("The result is: %4.2f units of length and the error is %-2d%% " , integral , intError));
+		}
+		else
+		{
+			System.out.println(String.format("The result is: 0%4.2f units of length and the error is %-2d%% " , integral , intError));
+		}
 		// When increasing value of N, error value decrease
 
 	}

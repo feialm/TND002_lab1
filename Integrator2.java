@@ -47,9 +47,22 @@ public class Integrator2 {
 		intError = (int)error;
 		// gör om error till int, lagrar i ny variabel
 		
-		System.out.println(String.format("The result is: %4.2f units of length and the error is %-2d percent", integral , intError));	
+		
+		
+		//if else sats här
+		if(integral > 10.00)
+		{
+			System.out.println(String.format("The result is: %4.2f units of length and the error is %-2d%% " , integral , intError));
+		}
+		else
+		{
+			System.out.println(String.format("The result is: 0%4.2f units of length and the error is %-2d%% " , integral , intError));
+		}
+		
+			
 		// When increasing value of N, error value decrease
 		// 4 slots, two of them are for deciamls
+		// to write out %-symbol, code: %%
 		
 		N++; // lägger till ett N
 		base = 2.0/N; // new base when N is changed
