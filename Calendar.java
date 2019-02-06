@@ -26,7 +26,6 @@ public class Calendar {
 				{
 				data [counter][i] =  inString[i]; // lägger in förnamn, efternamn, dag, månad, år i en rad, 5 olika kolumner
 				}
-				
 				counter++; //increase counter by 1 when a names and their birthday is added to slot
 				return "Person added at position " +  counter +".";
 			}				
@@ -104,8 +103,11 @@ public class Calendar {
 			
 			}
 			
-			return lowerCaseName + " "+ upperCaseSurname + " " + dateMonthYear[1]+ " "+ Month + " "+ dateMonthYear[2];
-			// Skriv om till till String.format		
+			String returningNames = String.format(lowerCaseName + " " + upperCaseSurname + " has birthday on the " + dateMonthYear[1]+ " "+ Month + " "+ dateMonthYear[2]);
+			
+			// return lowerCaseName + " "+ upperCaseSurname + " " + dateMonthYear[1]+ " "+ Month + " "+ dateMonthYear[2];
+			return returningNames;
+			
 			
 		}
 		
