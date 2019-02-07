@@ -29,18 +29,20 @@ public class Lab1 {
 			
 			String[] person = list[j].split(" +");// förnamn klipps av, läggs in, efternman klipps av, läggs in osv
 	
-			theCalendar.addperson(person);	
+			//Kallar på funktionen addperson och skriver ut den direkt, den är en sträng
+			System.out.println(theCalendar.addperson(person));	
 			
 		//System.out.println(list[1]);
 		//System.out.println(theDataBase);
 			
 		//System.out.println(theCalendar.data[j][0]); //man skriver ut namnet på personen [0]
 		
-		String[] arrayForNames = theCalendar.getName(j);
+		//Kallar på funktionen getName och skriver ut värdena, bygger upp en sträng av en array
+		 String[] arrayForNames = theCalendar.getName(j);
 		//System.out.println(arrayForNames[0] + " " + arrayForNames[1]);
 		
 
-		// Kallar på funktionen getBirthDate och skriver ut värdena
+		// Kallar på funktionen getBirthDate och skriver ut värdena, bygger upp en sträng av en array
 		Integer[]arrayForBirthDates = theCalendar.getBirthDate(j);
 		//System.out.println(arrayForBirthDates[0] + " " + arrayForBirthDates[1] + " " + arrayForBirthDates[2]);
 		
